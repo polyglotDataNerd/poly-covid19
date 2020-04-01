@@ -14,7 +14,7 @@ Dependencies:
 
 Intention
 -
-* The intention of this repo is to clean and standardize a data model that can be put into visualization tools or pattern algorithms to find insight and trends for what's going on activiley with the virus. 
+* The intention of this repo is to clean and standardize a data model that can be put into visualization tools or pattern algorithms to find insight and trends for what's going on actively with the virus. 
 
 Frequency
 -  
