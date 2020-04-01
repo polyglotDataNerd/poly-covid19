@@ -34,6 +34,5 @@ func GetCSV(bucket string, key string) {
 		Bucket: bucket,
 		Key:    key,
 	}.S3UploadGzip(resp.Body, a.SessionGenerator())
-	
 
 }
