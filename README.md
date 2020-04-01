@@ -19,3 +19,7 @@ Intention
 Frequency
 -  
 * Data is updated daily but can be increased to real time depending on how fast this data gets to the API's 
+    - Output of data can be found here:
+        1. [Johns Hopkins University](output/JHU.csv)
+        2. [Corona Data Scraper](output/CDS.csv)
+        
