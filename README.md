@@ -6,6 +6,7 @@ This project consolidates two of the major COVID19 data repositories and consoli
 Dependencies:
 * [Corona Data Scraper](https://coronadatascraper.com/#home)
 * [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19)
+* [COVID19 Analysis Repo (Apache Spark)](https://github.com/polyglotDataNerd/poly-spark-covid)
 * [AWS S3](https://aws.amazon.com/s3/)
 * [GoLang 1.14](https://golang.org/)
 * [GO Utils library](https://github.com/polyglotDataNerd/zib-Go-utils)
