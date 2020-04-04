@@ -44,14 +44,14 @@ func (j *JHU) Munge(bucket string, key string) {
 	go reader.ReadObj(j.ChannelLine, j.ChannelOut)
 
 	for line := range j.ChannelOut {
-		j.Wg.Add(1)
-		time.Sleep(1 * time.Millisecond)
-		go func() {
-			defer j.Wg.Done()
-			if !strings.Contains(strings.Split(line, ",")[0], "FIPS") {
+		if !strings.Contains(strings.Split(line, ",")[0], "FIPS") {
+			j.Wg.Add(1)
+			time.Sleep(500 * time.Microsecond)
+			go func() {
+				defer j.Wg.Done()
 				builder.WriteString(fmt.Sprintf("%s%s", line, "\n"))
-			}
-		}()
+			}()
+		}
 	}
 	j.Wg.Wait()
 	aws.S3Obj{Bucket: bucket, Key: key,}.S3WriteGzip(builder.String(), aws.SessionGenerator())
