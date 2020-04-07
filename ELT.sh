@@ -6,5 +6,6 @@ git pull
 aws s3 cp ~/external/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"$CURRENTDATE".csv s3://poly-testing/covid/jhu/raw/"$CURRENTDATE".csv --sse
 
 # runs go package
-go run ~/solutionsgo/poly-covid19/Entry.go
+cd ~/solutionsgo/poly-covid19/
+go run Entry.go
 cd ~/
