@@ -14,3 +14,5 @@ cd ~/
 cd cd ~/solutions/poly-spark-covid/
 mvn clean package
 java -cp poly-spark-covid-1.0-production.jar com.poly.covid.Loader
+
+cd ~/
