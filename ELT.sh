@@ -12,8 +12,10 @@ cd ~/
 
 # runs spark package using scala in .jar
 # http://biercoff.com/how-to-install-scala-on-mac-os/
-cd ~/solutions/poly-spark-covid/
-mvn clean package
-scala -classpath "target/poly-spark-covid-1.0-production.jar" "com.poly.covid.Loader"
-mvn clean
-cd ~/
+#cd ~/solutions/poly-spark-covid/
+#mvn clean package
+#spark-submit --class com.poly.covid.Loader \
+#--master local["*"] \
+#target/poly-spark-covid-1.0-production.jar
+#mvn clean
+#cd ~/
