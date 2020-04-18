@@ -10,9 +10,10 @@ cd ~/solutionsgo/poly-covid19/
 go run Entry.go
 cd ~/
 
-# runs spark package (.jar)
-cd cd ~/solutions/poly-spark-covid/
+# runs spark package using scala in .jar
+# http://biercoff.com/how-to-install-scala-on-mac-os/
+cd ~/solutions/poly-spark-covid/
 mvn clean package
-java -cp poly-spark-covid-1.0-production.jar com.poly.covid.Loader
-
+scala -classpath "target/poly-spark-covid-1.0-production.jar" "com.poly.covid.Loader"
+mvn clean
 cd ~/
