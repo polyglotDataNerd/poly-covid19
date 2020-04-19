@@ -10,6 +10,10 @@ cd ~/solutionsgo/poly-covid19/
 go run Entry.go
 cd ~/
 
+# run EMR spark job
+source ~/solutions/poly-spark-covid/EMR.sh
+cd ~/
+
 # runs spark package using scala in .jar
 # http://biercoff.com/how-to-install-scala-on-mac-os/
 #cd ~/solutions/poly-spark-covid/
