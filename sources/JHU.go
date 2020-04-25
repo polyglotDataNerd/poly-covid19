@@ -50,10 +50,10 @@ func (j *JHU) Munge(bucket string, key string) {
 			go func() {
 				defer j.Wg.Done()
 				builder.WriteString(fmt.Sprintf("%s%s", line, "\n"))
-				/* checks to see if previous day file is processing */
-				if strings.Contains(strings.Split(line, ",")[4], time.Now().Add(-time.Hour*24).Format("2006-01-02")) {
+				/* checks to see if previous day file is processing
+				if strings.Contains(strings.Split(line, ",")[4], time.Now().Add(-time.Hour*48).Format("2006-01-02")) {
 					utils.Info.Println(line)
-				}
+				} */
 			}()
 		}
 	}
