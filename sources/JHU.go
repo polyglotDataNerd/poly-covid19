@@ -45,19 +45,23 @@ func (j *JHU) Munge(bucket string, key string) {
 
 	for line := range j.ChannelOut {
 		if !strings.Contains(strings.Split(line, ",")[0], "FIPS") {
-			j.Wg.Add(1)
-			time.Sleep(500 * time.Microsecond)
-			go func() {
-				defer j.Wg.Done()
-				builder.WriteString(fmt.Sprintf("%s%s", line, "\n"))
-				/* checks to see if previous day file is processing
-				if strings.Contains(strings.Split(line, ",")[4], time.Now().Add(-time.Hour*48).Format("2006-01-02")) {
-					utils.Info.Println(line)
-				} */
-			}()
+			builder.WriteString(fmt.Sprintf("%s%s", line, "\n"))
 		}
+		//time.Sleep(500 * time.Nanosecond)
+		//	if !strings.Contains(strings.Split(line, ",")[0], "FIPS") {
+		//		j.Wg.Add(1)
+		//		time.Sleep(50 * time.Nanosecond)
+		//		go func(l string) {
+		//			defer j.Wg.Done()
+		//			builder.WriteString(fmt.Sprintf("%s%s", line, "\n"))
+		//			/* checks to see if previous day file is processing
+		//			if strings.Contains(strings.Split(line, ",")[4], time.Now().Add(-time.Hour*24).Format("2006-01-02")) {
+		//				utils.Info.Println(line)
+		//			} */
+		//		}(line)
+		//	}
 	}
-	j.Wg.Wait()
-	aws.S3Obj{Bucket: bucket, Key: key,}.S3WriteGzip(builder.String(), aws.SessionGenerator())
+	//j.Wg.Wait()
+	aws.S3Obj{Bucket: bucket, Key: key}.S3WriteGzip(builder.String(), aws.SessionGenerator())
 	utils.Info.Println("Runtime took ", time.Since(start))
 }
