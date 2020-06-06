@@ -2,8 +2,8 @@ package sources
 
 import (
 	"encoding/csv"
-	a "github.com/polyglotDataNerd/zib-Go-utils/aws"
-	u "github.com/polyglotDataNerd/zib-Go-utils/utils"
+	a "github.com/polyglotDataNerd/poly-Go-utils/aws"
+	u "github.com/polyglotDataNerd/poly-Go-utils/utils"
 	h "net/http"
 )
 

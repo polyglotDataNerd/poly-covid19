@@ -2,10 +2,10 @@ package sources
 
 import (
 	"fmt"
-	"github.com/polyglotDataNerd/zib-Go-utils/aws"
-	"github.com/polyglotDataNerd/zib-Go-utils/reader"
-	"github.com/polyglotDataNerd/zib-Go-utils/scanner"
-	"github.com/polyglotDataNerd/zib-Go-utils/utils"
+	"github.com/polyglotDataNerd/poly-Go-utils/aws"
+	"github.com/polyglotDataNerd/poly-Go-utils/reader"
+	"github.com/polyglotDataNerd/poly-Go-utils/scanner"
+	"github.com/polyglotDataNerd/poly-Go-utils/utils"
 	"strings"
 	"sync"
 	"time"

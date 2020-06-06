@@ -9,7 +9,7 @@ Dependencies:
 * [COVID19 Analysis Repo (Apache Spark)](https://github.com/polyglotDataNerd/poly-spark-covid)
 * [AWS S3](https://aws.amazon.com/s3/)
 * [GoLang 1.14](https://golang.org/)
-* [GO Utils library](https://github.com/polyglotDataNerd/zib-Go-utils)
+* [GO Utils library](https://github.com/polyglotDataNerd/poly-Go-utils)
 * [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 
 

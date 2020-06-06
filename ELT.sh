@@ -8,7 +8,7 @@ aws s3 cp ~/external/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"$C
 # runs go package
 cd ~/solutionsgo/poly-covid19/
 # run with profile and tracing
-GODEBUG=gctrace=1,schedtrace=1000 go run Entry.go
+GODEBUG=gctrace=1,scheddetail=1,schedtrace=1000 go run Entry.go
 cd ~/
 
 # run EMR spark job
