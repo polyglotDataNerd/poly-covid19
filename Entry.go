@@ -20,5 +20,5 @@ func main() {
 		Wg:          wg,
 	}
 	jhu.Munge("poly-testing", fmt.Sprintf("%s%s%s%s%s", "covid/jhu/transformed/", time.Now().Format("2006-01-02"), "/jhu_", time.Now().Format("2006-01-02"), ".gz"))
-	sources.GetCSV("poly-testing", fmt.Sprintf("%s%s%s%s%s", "covid/cds/", time.Now().Format("2006-01-02"), "/cds_", time.Now().Format("2006-01-02"), ".gz"))
+	sources.GetZip("poly-testing", fmt.Sprintf("%s%s%s%s%s", "covid/cds/", time.Now().Format("2006-01-02"), "/cds_", time.Now().Format("2006-01-02"), ".gz"))
 }
