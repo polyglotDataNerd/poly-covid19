@@ -27,8 +27,8 @@ func ReadCSV() {
 
 }
 
-func GetCSV(bucket string, key string) {
-	resp, err := h.Get("https://coronadatascraper.com/timeseries.csv")
+func GetCSV(bucket string, key string, url string) {
+	resp, err := h.Get(url)
 	if err != nil {
 		u.Error.Println(err, "Could not reach API")
 	}
